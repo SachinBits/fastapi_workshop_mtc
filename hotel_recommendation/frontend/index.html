@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamStay - Smart Hotel Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="glass-panel header">
+            <h1>DreamStay <span class="accent">AI</span></h1>
+            <p>Find your perfect getaway with smart recommendations.</p>
+        </header>
+
+        <section class="glass-panel search-section">
+            <h2>Start your journey</h2>
+            <form id="recommendation-form" class="search-form">
+                <div class="form-group">
+                    <label for="location">Destination</label>
+                    <input type="text" id="location" placeholder="e.g. New York, Miami" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="max-price">Max Budget ($)</label>
+                    <input type="number" id="max-price" placeholder="400" min="0">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Amenities</label>
+                    <div class="amenities-grid">
+                        <label class="checkbox-btn">
+                            <input type="checkbox" name="amenities" value="WiFi">
+                            <span>WiFi</span>
+                        </label>
+                        <label class="checkbox-btn">
+                            <input type="checkbox" name="amenities" value="Pool">
+                            <span>Pool</span>
+                        </label>
+                        <label class="checkbox-btn">
+                            <input type="checkbox" name="amenities" value="Gym">
+                            <span>Gym</span>
+                        </label>
+                        <label class="checkbox-btn">
+                            <input type="checkbox" name="amenities" value="Spa">
+                            <span>Spa</span>
+                        </label>
+                        <label class="checkbox-btn">
+                            <input type="checkbox" name="amenities" value="Beach Access">
+                            <span>Beach</span>
+                        </label>
+                        <label class="checkbox-btn">
+                            <input type="checkbox" name="amenities" value="Breakfast">
+                            <span>Breakfast</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="trip-desc">Describe your dream trip (AI)</label>
+                    <textarea id="trip-desc" rows="3"
+                        placeholder="e.g. A romantic getaway for our anniversary, we love quiet places and good food..."></textarea>
+                </div>
+
+                <button type="submit" class="cta-button">
+                    <span class="btn-text">Find Hotels</span>
+                    <div class="glow"></div>
+                </button>
+            </form>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <div class="section-header">
+                <h2>Top Recommendations</h2>
+                <span class="badge">AI Powered</span>
+            </div>
+            <div id="results-grid" class="results-grid">
+                <!-- Cards injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
